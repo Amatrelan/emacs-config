@@ -20,6 +20,8 @@
 ;;; Formatter changes
 (after! nix-mode
   (set-formatter! 'alejandra '("alejandra" "-") :modes '(nix-mode)))
+(after! js2-mode
+  (set-formatter! 'alejandra '("eslint_d" "--fix" "--stdin") :modes '(js2-mode)))
 
 ;;; LSP changes, there will be a lot to get used to emacs now that I have fully custom in
 ;;; neovim
